@@ -8,543 +8,170 @@
 * IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
 * PARTICULAR PURPOSE.
 *
-* Filename:	 						HVAC.css
+* Filename:             HVAC_iphone.css
 * Version:              2.0
-* Date:                 January 2015
+* Date:                 May 2015
 * Project:              RVI - HVAC mobile
 *
 */
-*
-*/
 
-/* Adds z-index to #settingsPage due to z-indexing in sliderui js */
-#hvac-app #settingsPage {
-	z-index: 3;
-}
 
-/* Override for Settings list items */
-
-.settingElement {
-	margin: 0 40px; 
-}
-
-/*********** UI Slider stuff is in nouislider.HVAC.css ***********/
+/*********** UI Slider stuff is in nouislider.HVAC-720.css ***********/
 
 html {
-	/*overflow: hidden;*/
-
+  overflow: hidden;
 }
 
 body {
-	overflow: hidden;
-	width: 720px;
-	height: 1080px;
+  overflow: hidden;
+  width: 720px;
+  height: 1080px;
 }
 
-.clearBoth {
-	clear:both;
+.static_parts_bg {
+  top: 15.5%;
+  height: 60.1%;
 }
 
-.borderColorTheme {
-	border-color: rgb(196, 196, 196);
-	border-color: rgba(196, 196, 196, 0.5);
-}
 
-.static_parts_bg{
-	background:url("../images/static_parts_bg.svg") no-repeat;
-	height:60.1%;/*601/1000*/
-	width:100%;/*720/720*/
-	position:absolute;
-	top:15.5%;
-	background-size:100%;
-}
-
-h6, .label {
-  font-size: 2rem;
-  text-transform: uppercase;
-}
 /*********HAZARD BUTTON************/
-
-.hazard_btn{
-	width: 59%;
-	height: 10%;
-	background: url("../images/hazard_off.svg") no-repeat;
-	top: 2.5%;
-	left: 21%;
-	position: absolute;
-	background-size: 100%;
-}
-
-.hazard_btn.on{
-	background:url("../images/hazard_on.svg") no-repeat;
-	background-size:100%;
-}
-
-.hazard_btn.blink{
-	background:url("../images/hazard_blink.svg") no-repeat;
-	background-size:100%;
+.hazard_btn {
+  top: 2.5%;
 }
 
 .climate_labels {
-	position: absolute;
-	width: 80%;
-	height: 10%;
-	top: 14%;
-	left: 14.25%;
+  top: 14%;
 }
 
 .label_borders {
-	border-left: 55px solid #fe9c00;
-	padding-left: 1%;
-	float: left;
-	margin: 0 8.75%;
+  margin: 0 9.25%;
 }
 
 /*********LEFT HEAT SEAT BUTTON************/
 
 .left_seat_btn {
-	width: 22%;/*159/720*/
-	height: 13.6%;
-	position:absolute;
-	left: 21%; /*152/720*/
-	top: 18%;
+  top: 18%;
 }
 
-.left_heat_seat_off{
-	background:url("../images/left_heat_seat_off.svg") no-repeat;
-	background-size:100%;	
-	width:100%;
-	height:100%;
-	position:absolute;		
+.left_heat_seat_on {
+  bottom: 12%;
 }
 
-.left_heat_seat_on{
-	height: 100%;
-	background:url("../images/left_heat_seat_on.svg") no-repeat bottom;
-	width:100%;
-	position:absolute;
-	bottom: 12%;
-	background-size:100%;	
+.left_heat_seat_on.stage2 {
+  height: 40%;
 }
 
-.left_heat_seat_on.stage1{
-	height:0;
-}
-
-.left_heat_seat_on.stage2{
-	height: 40%;
-}
-
-.left_heat_seat_on.stage3{
-	height: 55%;
-}
-
-.left_heat_seat_on.stage4{
-	height:100%;
+.left_heat_seat_on.stage3 {
+  height: 55%;
 }
 
 /*********RIGHT HEAT SEAT BUTTON************/
 
-.right_seat_btn{
-	width: 22%;/*159/720*/
-	height: 13.4%;
-	position:absolute;
-	right: 21%; /*152/720*/
-	top: 18%;
+.right_seat_btn {
+  top: 18%;
 }
 
-.right_heat_seat_off{
-	background:url("../images/right_heat_seat_off.svg") no-repeat;
-	width:100%;
-	height:100%;
-	position:absolute;	
-	background-size:100%;	
-}
-
-.right_heat_seat_on{
-	height: 100%;
-	background:url("../images/right_heat_seat_on.svg") no-repeat bottom;
-	width:100%;
-	position:absolute;
-	bottom: 12%;
-	background-size:100%;	
-}
-
-.right_heat_seat_on.stage1 {
-	height:0;
+.right_heat_seat_on {
+  bottom: 12%;
 }
 
 .right_heat_seat_on.stage2 {
-	height: 40%;
+  height: 40%;
 }
 
 .right_heat_seat_on.stage3 {
-	height: 55%;
-}
-
-.right_heat_seat_on.stage4 {
-	height:100%;
+  height: 55%;
 }
 
 /*********LEFT NUM SLIDER************/
-
 .left_num_bg {
-	background: url("../images/left_number_bg.svg") no-repeat;
-	width: 22%;
-	height: 20.75%;
-	position: absolute;
-	left: 25%;
-	top: 33.5%;
-	overflow: hidden;
-	/*z-index: 4;*/
-	background-size: 100%;
+  top: 33.5%;
+  height: 20.75%;
 }
 
-.left_num_cover{
-	background:url("../images/left_number_cover.svg") no-repeat;
-	width: 22%;/*158/720*/
-	height: 25%;
-	position:absolute;
-	left: 21%; /*152/720*/
-	top: 33%;
-	/*z-index:5;*/
-  pointer-events:none;
-	background-size:100%;    
-}
-
-.scrollable.left {
-	height: 100%;
-	position: absolute;
-	width: 100%;
-}
-
-.scrollable.left ul{
-	list-style-type:none;
-	/* font-size: 3rem; */
-	padding:0;	
-	margin:0;
-	position: relative; /* Enables positionning of elements inside viewport */
-	height:100%;
-}
-
-.scrollable.left li{
-	width:100%;
-	margin:0;
-	padding:0;
-	color:#fff;
-	line-height:130%;
-	text-align:left;
-	padding-left:5%;
-	position:relative;
-	font-size: 6rem;
+.left_num_cover {
+  top: 33%;
 }
 
 /*********RIGHT NUM SLIDER************/
-
 .right_num_bg {
-	background: url("../images/right_number_bg.svg") no-repeat;
-	width: 22%;
-	height: 20.75%;
-	position: absolute;
-	right: 19%;
-	top: 33.5%;
-	overflow: hidden;
-	/*z-index: 4;*/
-	background-size: 100%;
+  top: 33.5%;
+  height: 20.75%;
 }
 
-.right_num_cover{
-	background:url("../images/right_number_cover.svg") no-repeat;
-	width: 22%;/*158/720*/
-	height: 25%;
-	position:absolute;
-	right: 21%; /*152/720*/
-	top: 33%;
-	/*z-index:5;*/
-  pointer-events:none;
-	background-size:100%;    
-}
-
-.scrollable.right {
-	height: 100%;
-	position: absolute;
-	width: 100%;
-
-}
-
-.scrollable.right ul{
-	list-style-type:none;
-	font-size: 3rem;
-	padding:0;	
-	margin:0;
-	position: relative; /* Enables positionning of elements inside viewport */
-	height:100%;
-}
-
-.scrollable.right li {
-	width:100%;
-	margin:0;
-	padding:0;
-	color:#fff;
-	line-height:130%;
-	text-align:left;
-	padding-left:16%;
-	position:relative;
-	font-size: 6rem;
+.right_num_cover {
+  top: 33%;
 }
 
 /*************lower half******************/
 .fanSpeedOn {
-	height: 6%;
-	background: url("../images/fan_bar_on.svg") no-repeat;
-	position: absolute;
-	left: 33%;
-	top: 63%;
+  top: 63%;
+  height: 6%;
 }
 
 /********FAN DIRECTION***********/
-.fan_dir_down_btn{
-	background:url("../images/fan_dir_down_off.svg") no-repeat;
-	width:17.08333333%;/*123/720*/
-	height:4.8em;
-	top: 63%;/*20/1000*/
-	left:3.333333%; /*24/720*/
-	position:absolute;
-	background-size:100%;
+.fan_dir_down_btn {
+  top: 63%;
 }
 
-.fan_dir_down_btn.on{
-	background:url("../images/fan_dir_down_on.svg") no-repeat;
-	background-size:100%;
+.fan_dir_right_btn {
+  top: 74%;
 }
 
-.fan_dir_right_btn{
-	background:url("../images/fan_dir_right_off.svg") no-repeat;	
-	width:17.08333333%;/*123/720*/
-	height:4.4em;
-	top: 74%;/*20/1000*/
-	left:3.333333%; /*24/720*/
-	position:absolute;
-	background-size:100%;
+.fan_dir_up_btn {
+  top: 84.2%;
 }
 
-.fan_dir_right_btn.on{
-	background:url("../images/fan_dir_right_on.svg") no-repeat;
-	background-size:100%;
+.fan_control_ac {
+  top: 74%;
 }
 
-.fan_dir_up_btn{
-	background:url("../images/fan_dir_up_off.svg") no-repeat;
-	width:17.08333333%;/*123/720*/
-	height:4.4em;
-	top: 84.2%;/*20/1000*/
-	left:3.333333%; /*24/720*/
-	position:absolute;
-	background-size:100%;
-}
-.fan_dir_up_btn.on{
-	background:url("../images/fan_dir_up_on.svg") no-repeat;
-	background-size:100%;
+.fan_control_auto {
+  top: 74%;
 }
 
-.fan_control_ac{
-	background:url("../images/fan_control_ac_off.svg") no-repeat;
-	width:15.555556%;/*112/720*/
-	height:4.4em;
-	top: 74%;
-	left:24.333%; /*24/720*/
-	position:absolute;
-	background-size:100%;
-}
-
-.fan_control_ac.on{
-	background:url("../images/fan_control_ac_on.svg") no-repeat;
-	background-size:100%;
-}
-
-.fan_control_auto{
-	background:url("../images/fan_control_auto_off.svg") no-repeat;
-	width:15.416667%;/*111/720*/
-	height:4.4em;
-	top: 74%;
-	left:42.333%; /*24/720*/
-	position:absolute;
-	background-size:100%;
-}
-
-.fan_control_auto.on{
-	background:url("../images/fan_control_auto_on.svg") no-repeat;
-	background-size:100%;
-}
-
-.fan_control_circ{
-	background:url("../images/fan_control_circ_off.svg") no-repeat;
-	width:15.555556%;/*112/720*/
-	height:4.4em;
-	top: 74%;
-	left:60.333%; /*24/720*/
-	position:absolute;
-	background-size:100%;
-}
-
-.fan_control_circ.on{
-	background:url("../images/fan_control_circ_on.svg") no-repeat;
-	background-size:100%;
+.fan_control_circ {
+  top: 74%;
 }
 
 /***DEFROST****/
-
-.defrost_max_btn{
-	background:url("../images/defrost_max_off.svg") no-repeat;
-	width:17.08333333%;/*123/720*/
-	height:4.8em;
-	top: 63%;/*20/1000*/
-	right:3.333333%; /*24/720*/
-	position:absolute;
-	background-size:100%;
+.defrost_max_btn {
+  top: 63%;
 }
 
-.defrost_max_btn.on{
-	background:url("../images/defrost_max_on.svg") no-repeat;
-	background-size:100%;
+.defrost_rear_btn {
+  top: 74%;
 }
 
-.defrost_rear_btn{
-	background:url("../images/defrost_rear_off.svg") no-repeat;	
-	width:17.08333333%;/*123/720*/
-	height:4.4em;
-	top: 74%;/*20/1000*/
-	right:3.333333%; /*24/720*/
-	position:absolute;
-	background-size:100%;
+.defrost_front_btn {
+  top: 84.2%;
 }
 
-.defrost_rear_btn.on{
-	background:url("../images/defrost_rear_on.svg") no-repeat;
-	background-size:100%;
-}
-
-.defrost_front_btn{
-	background:url("../images/defrost_front_off.svg") no-repeat;
-	width:17.08333333%;/*123/720*/
-	height:4.4em;
-	top: 84.2%;/*20/1000*/
-	right:3.333333%; /*24/720*/
-	position:absolute;
-	background-size:100%;
-}
-
-.defrost_front_btn.on{
-	background:url("../images/defrost_front_on.svg") no-repeat;
-	background-size:100%;
-}		
-
-#bottomBarLogoImg{
-	position: absolute;
-	width: 40%;
-	left: 50%;
-	bottom: 6%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-}
-.bottomBarLogo {
-	content:url('../images/jlr_logo_color.png');
-}
 .fa {
-	position: absolute;
-  color: #FE9C00;
-	right: 2.5%;
-	top: 2%;
-	-webkit-transform: translate(0, 0);
+  position: absolute;
+  margin-top: 0;
+  margin-right: 0;
+  top: 2%;
+  right: 2.5%;
+  -webkit-transform: translate(0, 0);
 }
-#settings {
-	z-index: 1;
-}
+
 #settings > label {
-	font-size: 3em;
+  font-size: 3em;
 }
-.modal-bkgrnd {
-  width: 80%;  
-  background-color: #333;  
-  padding: 0 20px 20px 30px;
-}
-/*form {
-	max-width: 90%;
-	background-color: #444;
-	color: #fe9c00;
-	padding: 3%;
-}*/
-button {
-	margin: 3% 0;
-	font-size: 1.5em;
-}
+
 .text-input {
-	border: none;
-	max-width: 90%;
-	padding: 3%;
-	margin: 2% 0;
-	background-color: rgba(255, 255, 255, 0.8);
-	font-size: 1.25em;
-	color: #000;
-}
-
-/*severe weather alert box*/
-.weather-alert {
-	background: -webkit-linear-gradient(top, #222 30%, rgba(83, 181, 206, .6) 100%);
-	color: #fff;
-	-webkit-opacity: 0.95;	
-	-webkit-box-shadow: 0 0 90px rgba(255,255,255,0.8);
-	overflow-y: scroll;
-	overflow-x: auto;
-	touch-action: pan-y;
-	z-index: 1;
-	background-color: #222;	
-	padding: 20px 20px 20px 30px;
-	width: 90%;
-	max-height: 90%;
-	top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	position: fixed;
-	left: 50%;
-}
-.weather-alert > .close-button {
-	padding: 0;
-}
-/* text inside alert must be large enough to be easily legible */
-.weather-alert > p {
-	font-size: .75em;
-	color: #FFF;
-	padding: 0 10px;
-	line-height: 1.5em;	
-}
-.weather-alert > h2 {
-	font-size: 1.5em;
-}
-
-.qrcode-button {
-  align-items: center;
-  background: linear-gradient(#888, #333);
-  background: url('../images/qr-code.png') no-repeat center;
-  height: 100px;
-  width: 100px; 
-/*  border: 5px solid rgba(255, 255, 255, .4);
-  box-shadow: inset 0px 0px 2px 1px #444;                                       
-  border-top: 5px solid #fff;
-  border-bottom: 5px solid #444;*/
-  border-radius: 4px;
-  margin-right: 10%;
-  box-shadow: 2px 0px 15px #000;
-  -webkit-box-shadow: 1px 1px 15px #000;
+  font-size: 1.25em;
+  color: #000;
+  background-color: rgba(255, 255, 255, .8);
 }
 
 .input-group {
-	align-items: center;
-	border: none;
-  justify-content: center;
-  -webkit-justify-content: center;
   -webkit-align-items: center;
 }
 
 button {
-	padding: 15px 30px;
+  font-size: 1.5em;
+  padding: 15px 30px;
+  height: 100px;
 }
